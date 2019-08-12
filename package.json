@@ -1,0 +1,53 @@
+{
+	"name": "bpmonline-protractor-tests",
+	"description": "E2E tests for bpm'online and bpm'online Studio Free (BSF)",
+	"version": "0.0.1",
+	"private": true,
+	"dependencies": {
+		"@log4js-node/rabbitmq": "^1.1.0",
+		"@microsoft/tsdoc": "^0.12.10",
+		"@types/faker": "^4.1.5",
+		"@types/jasmine": "^3.3.14",
+		"@types/jasminewd2": "^2.0.6",
+		"@types/lodash": "^4.14.136",
+		"@types/node": "^10.14.13",
+		"axios": "^0.19.0",
+		"deepmerge": "^4.0.0",
+		"faker": "^4.1.0",
+		"husky": "^3.0.1",
+		"jasmine": "^3.3.1",
+		"jasmine-allure-reporter": "^1.0.2",
+		"jasmine-reporters": "^2.3.2",
+		"jasmine-spec-reporter": "^4.2.1",
+		"lodash": "^4.17.15",
+		"log4js": "^4.5.1",
+		"log4js-protractor-appender": "^1.1.2",
+		"prettier": "^1.15.3",
+		"pretty-quick": "^1.8.0",
+		"protractor": "^5.4.2",
+		"protractor-beautiful-reporter": "^1.2.8",
+		"protractor-image-comparison": "^3.3.0",
+		"request": "^2.88.0",
+		"set-cookie-parser": "^2.3.8",
+		"ts-node": "^8.3.0",
+		"tslint": "^5.18.0",
+		"tslint-eslint-rules": "^5.4.0",
+		"typescript": "^3.5.3"
+	},
+	"scripts": {
+		"setup": "npm install && node node_modules/protractor/bin/webdriver-manager update --gecko=false",
+		"tsc": "tsc",
+		"test-ci:prepare": "npm ci && node node_modules/protractor/bin/webdriver-manager update --gecko=false",
+		"test-ci": "./node_modules/.bin/protractor ./config.js --suite all-tests",
+		"lint": "./node_modules/.bin/tslint --force -c tslint.json --project ./tsconfig.json",
+		"lint-fix": "./node_modules/.bin/tslint --fix --project ./tsconfig.json",
+		"all-tests": "./node_modules/.bin/protractor ./config.js --suite all-tests"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "pretty-quick --staged"
+		}
+	},
+	"author": "lolo",
+	"license": "ISC"
+}
