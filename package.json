@@ -20,7 +20,7 @@
 		"jasmine-reporters": "^2.3.2",
 		"jasmine-spec-reporter": "^4.2.1",
 		"lodash": "^4.17.15",
-		"log4js": "^4.5.1",
+		"log4js": "^6.4.0",
 		"log4js-protractor-appender": "^1.1.2",
 		"prettier": "^1.15.3",
 		"pretty-quick": "^1.8.0",
